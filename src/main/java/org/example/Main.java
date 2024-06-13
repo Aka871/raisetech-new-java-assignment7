@@ -60,6 +60,14 @@ public class Main {
         .filter(n -> n % 2 != 0)
         .mapToInt(Integer::intValue)
         .average());
+
+    //4.ChatGPTに、Stream APIの基礎的な課題を作ってもらう
+    //数値のリストを作成し、その中から偶数のものだけを抽出し、2倍した値の合計を出力する
+    List<Integer> numberList2 = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+    System.out.println(numberList2.stream()
+        .filter(n -> n % 2 == 0)
+        .mapToInt(n -> n * 2)
+        .sum());
   }
 }
 
