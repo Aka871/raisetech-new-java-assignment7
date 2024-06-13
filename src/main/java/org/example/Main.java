@@ -52,6 +52,14 @@ public class Main {
     System.out.println(teacherList.stream()
         .filter(v -> v.length() >= 2)
         .collect(Collectors.joining(",")));
+
+    //3.要素数が10個の数値のリストを作成
+    //奇数のものだけを抽出し、平均値を出力する
+    List<Integer> scoreList = List.of(85, 90, 95, 100, 60, 75, 71, 96, 89, 73);
+    System.out.println(scoreList.stream()
+        .filter(n -> n % 2 != 0)
+        .mapToInt(Integer::intValue)
+        .average());
   }
 }
 
