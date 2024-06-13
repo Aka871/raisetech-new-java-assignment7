@@ -45,6 +45,13 @@ public class Main {
         .distinct()
         .collect(Collectors.joining(",")));
 
+    //2.要素数が10個の文字列のリストを作成
+    //文字数が2以上のものを抽出し、文字列に変換。区切り文字はカンマ(,)で行い、出力する
+    List<String> teacherList = List.of("城", "鈴木", "七五三掛", "田中", "田母神", "小鳥遊", "山口",
+        "伊藤", "田口", "甲");
+    System.out.println(teacherList.stream()
+        .filter(v -> v.length() >= 2)
+        .collect(Collectors.joining(",")));
   }
 }
 
